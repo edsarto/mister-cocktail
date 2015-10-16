@@ -7,7 +7,7 @@ class Dose < ActiveRecord::Base
   validates_presence_of :ingredient, allow_blank: false
   validates_presence_of :cocktail, allow_blank: false
 
-  validates_uniqueness_of :cocktail_id && :ingredient_id
+  validates :ingredient, :uniqueness => {:scope => :cocktail}
 
 
 end
