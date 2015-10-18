@@ -25,12 +25,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro'
 
-# gem 'rails_12factor', group: :production
-# gem 'puma',           group: :production
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
 
-# gem 'bootstrap-sass'
-# gem 'font-awesome-sass'
-# gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
 
 
 

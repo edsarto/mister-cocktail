@@ -1,1 +1,14 @@
 <h1><%= @cocktail.name %></h1>
+
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+  <li>
+    <%= dose.description %> </li>
+  <% end %>
+</ul>
+
+<%= image_tag @cocktail.picture.url(:medium) %>
+<h3 class="text-center">Add a dose <%= link_to "here", new_cocktail_dose_path(@cocktail) %></h3>
+
+
+

@@ -8,11 +8,12 @@
     width: 100%;
   }
   &-logo {
-    width: 50px;
+    width: auto;
+    height: 70px;
   }
   &-container {
     display: flex;
-    height: 70px;
+    height: 100px;
     align-items: center;
   }
   &-item {
@@ -113,4 +114,8 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+#imagenavbar {
+  padding: 0;
+  max-height: 50px;
+}
 }

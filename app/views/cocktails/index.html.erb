@@ -1,5 +1,22 @@
-<h1>Cocktails#index</h1>
 
-<% @cocktails.each do |r| %>
-  <%= render "cocktail", cocktail: r %>
-<% end %>
+<div class="banner text-center" style="background-image: url('https://unsplash.it/1000/500?image=0')">
+  <div class="banner-gradient"></div>
+  <div class="banner-content">
+    <h1>Great cocktails</h1>
+    <p>Ready to have some fun? </p>
+    <a class="btn btn-primary btn-lg">GET IT</a>
+  </div>
+</div>
+
+  <p class="center-text">Create a new cocktail <%= link_to "here!", new_cocktail_path, {class: "btn btn-danger"} %> </p>
+
+<div>
+  <% @cocktails.each do |cocktail| %>
+  <span class='card-bg'>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= image_tag cocktail.picture.url(:thumb) %>
+  </span>
+  <% end %>
+</div>
+
+
